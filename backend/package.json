@@ -1,0 +1,19 @@
+{
+  "name": "voice-first-grievance-redressal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI-powered voice-to-action grievance redressal pipeline with Sarvam AI speech recognition.",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^9.4.1"
+  }
+}

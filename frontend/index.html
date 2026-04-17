@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice-to-Action Grievance Pipeline</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">TEAM ASPIRE</p>
+          <h1>Voice-First Citizen Complaints System</h1>
+        </div>
+        <nav class="topnav">
+          <a href="#citizen-portal">Citizen Portal</a>
+          <a href="/track">Track Complaint</a>
+          <a href="/admin">Admin Dashboard</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="portal-grid" id="citizen-portal">
+          <section class="card portal-card">
+            <div class="section-heading">
+              <p class="eyebrow">Citizen Flow</p>
+              <h3>Submit a complaint</h3>
+            </div>
+
+            <div class="journey-strip">
+              <div class="journey-node">
+                <strong>Voice</strong>
+                <span>Citizen speaks</span>
+              </div>
+              <div class="journey-node">
+                <strong>Sarvam STT</strong>
+                <span>Speech becomes text</span>
+              </div>
+              <div class="journey-node">
+                <strong>Keyword Match</strong>
+                <span>Category predicted</span>
+              </div>
+              <div class="journey-node">
+                <strong>Location</strong>
+                <span>GPS or manual note</span>
+              </div>
+              <div class="journey-node">
+                <strong>Tracking ID</strong>
+                <span>Complaint submitted</span>
+              </div>
+            </div>
+
+            <form id="complaintForm" class="stack">
+              <div class="form-grid">
+                <label>
+                  <span>Name</span>
+                  <input id="citizenName" type="text" placeholder="Citizen name" />
+                </label>
+                <label>
+                  <span>Phone number</span>
+                  <input id="phoneNumber" type="tel" placeholder="+91 XXXXXX0000" />
+                </label>
+              </div>
+
+              <label>
+                <span>Area / locality</span>
+                <input id="area" type="text" placeholder="Example: Sector-16, Mohanlalganj,Lucknow " />
+              </label>
+
+              <div class="step-card">
+                <div class="step-header">
+                  <span class="step-index">01</span>
+                  <div>
+                    <h4>Capture voice input</h4>
+                    <p>Record up to 30 seconds or upload a short clip. Hindi, English, and code-mixed complaints are supported.</p>
+                  </div>
+                </div>
+
+                <div class="action-row">
+                  <button class="action-button primary" type="button" id="startRecording">Start recording</button>
+                  <button class="action-button ghost" type="button" id="stopRecording" disabled>Stop</button>
+                  <label class="upload-chip">
+                    <input id="audioUpload" type="file" accept="audio/*" />
+                    <span>Upload audio</span>
+                  </label>
+                </div>
+
+                <div class="status-strip" id="recordingStatus">No audio selected yet.</div>
+                <audio id="audioPreview" controls class="audio-preview hidden"></audio>
+              </div>
+
+              <div class="step-card">
+                <div class="step-header">
+                  <span class="step-index">02</span>
+                  <div>
+                    <h4>Transcribe using Sarvam AI</h4>
+                    <p>Use auto-detect or force Hindi/English. Code-mix mode works well when citizens switch between Hindi and English naturally.</p>
+                  </div>
+                </div>
+
+                <div class="hint-banner">
+                  Try code-mix complaints like: <strong>"Yahan road ke paas water leakage ho raha hai"</strong>
+                </div>
+
+                <div class="form-grid">
+                  <label>
+                    <span>Language</span>
+                    <select id="languageCode">
+                      <option value="unknown">Auto detect</option>
+                      <option value="hi-IN">Hindi</option>
+                      <option value="en-IN">English (India)</option>
+                    </select>
+                  </label>
+                  <label>
+                    <span>Output mode</span>
+                    <select id="transcriptionMode">
+                      <option value="codemix">Code-mix</option>
+                      <option value="transcribe">Transcribe</option>
+                      <option value="translate">Translate to English</option>
+                      <option value="verbatim">Verbatim</option>
+                    </select>
+                  </label>
+                </div>
+
+                <button class="action-button primary" type="button" id="transcribeButton">
+                  Transcribe with Sarvam
+                </button>
+              </div>
+
+              <div class="step-card">
+                <div class="step-header">
+                  <span class="step-index">03</span>
+                  <div>
+                    <h4>Review classification</h4>
+                    <p>The system maps transcript keywords to the nearest grievance category, then lets the citizen verify edge cases before filing.</p>
+                  </div>
+                </div>
+
+                <label>
+                  <span>Transcript</span>
+                  <textarea id="transcript" rows="4" placeholder="Transcript will appear here after speech recognition."></textarea>
+                </label>
+
+                <label>
+                  <span>Final complaint details</span>
+                  <textarea id="description" rows="4" placeholder="Refine the complaint text before submission."></textarea>
+                </label>
+
+                <div class="form-grid">
+                  <label>
+                    <span>Confirmed category</span>
+                    <select id="selectedCategory"></select>
+                  </label>
+                  <div class="classification-box" id="classificationBox">
+                    <strong>No category predicted yet.</strong>
+                    <p>Run speech transcription or type a complaint to see a smart suggestion.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step-card">
+                <div class="step-header">
+                  <span class="step-index">04</span>
+                  <div>
+                    <h4>Confirm location</h4>
+                    <p>The complaint will store browser coordinates when available, plus any landmark or address note for precision pinning.</p>
+                  </div>
+                </div>
+
+                <button class="action-button primary" type="button" id="useLocation">
+                  Use current location
+                </button>
+                <div class="status-strip" id="locationStatus">Location not captured yet.</div>
+
+                <label>
+                  <span>Location notes / address</span>
+                  <textarea id="locationAddress" rows="2" placeholder="Landmark, street, or address notes"></textarea>
+                </label>
+              </div>
+
+              <div class="submit-block">
+                <button class="action-button submit-button" type="submit">
+                  Save complaint and generate tracking ID
+                </button>
+                <div class="result-box hidden" id="successBox"></div>
+              </div>
+            </form>
+          </section>
+ 
+        </section>
+
+ 
+      </main>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

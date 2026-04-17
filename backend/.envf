@@ -1,0 +1,16 @@
+HOST=0.0.0.0
+PORT=3000
+
+SARVAM_API_KEY= sk_2mndazrv_bBKUXdbHdeCwbKwQB60jXxTm
+SARVAM_API_URL=https://api.sarvam.ai
+SARVAM_MODEL=saaras:v3
+SARVAM_LANGUAGE_CODE=unknown
+SARVAM_MODE=codemix
+SARVAM_WITH_TIMESTAMPS=false
+
+STORAGE_ENGINE=auto
+COMPLAINT_DATA_FILE=data/complaints.json
+MONGODB_URI=
+
+ADMIN_PASSWORD=admin123
+ADMIN_SESSION_SECRET=team-aspire-admin-session

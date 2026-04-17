@@ -1,0 +1,294 @@
+[
+  {
+    "trackingId": "RR30-20260417-6B6A12",
+    "citizenName": "NFX Karma",
+    "phoneNumber": "7905468436",
+    "area": "",
+    "transcript": "मेरे घर के सामने 1 उपेंद्र नाम का लड़का रहता है उसके घर के सामने 1 गड्ढा है जिसमें मैं रोधिर जाता हूँ कृपया करके इसे solve करें।",
+    "description": "मेरे घर के सामने 1 उपेंद्र नाम का लड़का रहता है उसके घर के सामने 1 गड्ढा है जिसमें मैं रोधिर जाता हूँ कृपया करके इसे solve करें।",
+    "category": {
+      "slug": "roads",
+      "label": "Roads & Potholes",
+      "department": "Public Works Department"
+    },
+    "classification": {
+      "recommendedCategory": {
+        "slug": "roads",
+        "label": "Roads & Potholes",
+        "department": "Public Works Department",
+        "description": "Broken roads, potholes, unsafe streets."
+      },
+      "confidence": 0.74,
+      "requiresValidation": false,
+      "matchedKeywords": [
+        "गड्ढा"
+      ],
+      "alternatives": []
+    },
+    "languageCode": "unknown",
+    "status": "Submitted",
+    "location": {
+      "latitude": 27.012847,
+      "longitude": 80.917144,
+      "accuracy": 144,
+      "address": "upendra ke ghar ke samne",
+      "source": "browser"
+    },
+    "transcription": {
+      "provider": "Sarvam AI",
+      "requestId": "20260417_3790f3e7-ba4d-4761-8954-143102992507",
+      "mode": "codemix",
+      "model": null,
+      "languageCode": "hi-IN",
+      "languageProbability": 0.999
+    },
+    "statusHistory": [
+      {
+        "status": "Submitted",
+        "changedAt": "2026-04-17T09:27:55.334Z",
+        "note": "Complaint submitted successfully."
+      }
+    ],
+    "createdAt": "2026-04-17T09:27:55.334Z",
+    "updatedAt": "2026-04-17T09:27:55.334Z"
+  },
+  {
+    "trackingId": "RR30-20260417-F578CC",
+    "citizenName": "shivam",
+    "phoneNumber": "7905468436",
+    "area": "ambalika",
+    "transcript": "मेरे घर के सामने 1 गड्ढे में बारिश का पानी भर गया है और उसकी वजह से काफ़ी accident हो रहे हैं तो उसको जल्द से जल्द solve करो",
+    "description": "मेरे घर के सामने 1 गड्ढे में बारिश का पानी भर गया है और उसकी वजह से काफ़ी accident हो रहे हैं तो उसको जल्द से जल्द solve करो",
+    "category": {
+      "slug": "water",
+      "label": "Water Supply & Leakage",
+      "department": "Water Board"
+    },
+    "classification": {
+      "recommendedCategory": {
+        "slug": "water",
+        "label": "Water Supply & Leakage",
+        "department": "Water Board",
+        "description": "Water shortage, leakage, low pressure, broken pipelines."
+      },
+      "confidence": 0.77,
+      "requiresValidation": false,
+      "matchedKeywords": [
+        "पानी",
+        "जल"
+      ],
+      "alternatives": [
+        {
+          "slug": "roads",
+          "label": "Roads & Potholes",
+          "department": "Public Works Department",
+          "description": "Broken roads, potholes, unsafe streets.",
+          "confidence": 0.56
+        }
+      ]
+    },
+    "languageCode": "unknown",
+    "status": "Under Review",
+    "location": {
+      "latitude": 27.012847,
+      "longitude": 80.917144,
+      "accuracy": 144,
+      "address": "",
+      "source": "browser"
+    },
+    "transcription": {
+      "provider": "Sarvam AI",
+      "requestId": "20260417_c152fdd5-1adf-4255-b3f0-26e95344976e",
+      "mode": "codemix",
+      "model": null,
+      "languageCode": "hi-IN",
+      "languageProbability": 1
+    },
+    "statusHistory": [
+      {
+        "status": "Submitted",
+        "changedAt": "2026-04-17T08:49:41.336Z",
+        "note": "Complaint submitted successfully."
+      },
+      {
+        "status": "Under Review",
+        "changedAt": "2026-04-17T08:50:26.513Z",
+        "note": "Updated by admin."
+      }
+    ],
+    "createdAt": "2026-04-17T08:49:41.336Z",
+    "updatedAt": "2026-04-17T08:50:26.513Z"
+  },
+  {
+    "trackingId": "RR30-20260417-7B959E",
+    "citizenName": "prashant",
+    "phoneNumber": "7905468436",
+    "area": "ambalika",
+    "transcript": "हमारे area में पानी बहुत ज़्यादा भर गया है",
+    "description": "हमारे area में पानी बहुत ज़्यादा भर गया है",
+    "category": {
+      "slug": "water",
+      "label": "Water Supply & Leakage",
+      "department": "Water Board"
+    },
+    "classification": {
+      "recommendedCategory": {
+        "slug": "water",
+        "label": "Water Supply & Leakage",
+        "department": "Water Board",
+        "description": "Water shortage, leakage, low pressure, broken pipelines."
+      },
+      "confidence": 0.62,
+      "requiresValidation": false,
+      "matchedKeywords": [
+        "पानी"
+      ],
+      "alternatives": []
+    },
+    "languageCode": "unknown",
+    "status": "Submitted",
+    "location": {
+      "latitude": 27.013866,
+      "longitude": 80.916495,
+      "accuracy": 117,
+      "address": "",
+      "source": "browser"
+    },
+    "transcription": {
+      "provider": "Sarvam AI",
+      "requestId": "20260417_c3400948-4ec0-462d-9770-ed188de44245",
+      "mode": "codemix",
+      "model": null,
+      "languageCode": "hi-IN",
+      "languageProbability": 1
+    },
+    "statusHistory": [
+      {
+        "status": "Submitted",
+        "changedAt": "2026-04-17T08:41:33.977Z",
+        "note": "Complaint submitted successfully."
+      }
+    ],
+    "createdAt": "2026-04-17T08:41:33.977Z",
+    "updatedAt": "2026-04-17T08:41:33.977Z"
+  },
+  {
+    "trackingId": "RR30-20260416-E9BDEB",
+    "citizenName": "",
+    "phoneNumber": "",
+    "area": "",
+    "transcript": "हमारे यहां की सड़क बहुत खराब है इसे जल्द से जल्द बनवाया जाए",
+    "description": "हमारे यहां की सड़क बहुत खराब है इसे जल्द से जल्द बनवाया जाए",
+    "category": {
+      "slug": "roads",
+      "label": "Roads & Potholes",
+      "department": "Public Works Department"
+    },
+    "classification": {
+      "recommendedCategory": {
+        "slug": "roads",
+        "label": "Roads & Potholes",
+        "department": "Public Works Department",
+        "description": "Broken roads, potholes, unsafe streets."
+      },
+      "confidence": 0.74,
+      "requiresValidation": false,
+      "matchedKeywords": [
+        "सड़क"
+      ],
+      "alternatives": [
+        {
+          "slug": "water",
+          "label": "Water Supply & Leakage",
+          "department": "Water Board",
+          "description": "Water shortage, leakage, low pressure, broken pipelines.",
+          "confidence": 0.33
+        }
+      ]
+    },
+    "languageCode": "unknown",
+    "status": "Field Assigned",
+    "location": {
+      "latitude": 26.628189,
+      "longitude": 80.925002,
+      "accuracy": 121,
+      "address": "",
+      "source": "browser"
+    },
+    "transcription": {
+      "provider": "Sarvam AI",
+      "requestId": "20260416_a59d77df-cfd8-417c-ac9b-5eefb1cb742f",
+      "mode": "codemix",
+      "model": null,
+      "languageCode": "hi-IN",
+      "languageProbability": 1
+    },
+    "createdAt": "2026-04-16T21:40:34.756Z",
+    "updatedAt": "2026-04-16T21:41:13.640Z",
+    "statusHistory": [
+      {
+        "status": "Field Assigned",
+        "changedAt": "2026-04-16T21:41:13.640Z",
+        "note": "Latest complaint status."
+      }
+    ]
+  },
+  {
+    "trackingId": "RR30-20260416-923B5C",
+    "citizenName": "",
+    "phoneNumber": "",
+    "area": "",
+    "transcript": "हमारे area में पानी की काफ़ी दिक्कत है 3-4 दिन से लगातार area में पानी नहीं आ रहा है",
+    "description": "हमारे area में पानी की काफ़ी दिक्कत है 3-4 दिन से लगातार area में पानी नहीं आ रहा है",
+    "category": {
+      "slug": "water",
+      "label": "Water Supply & Leakage",
+      "department": "Water Board"
+    },
+    "classification": {
+      "recommendedCategory": {
+        "slug": "water",
+        "label": "Water Supply & Leakage",
+        "department": "Water Board",
+        "description": "Water shortage, leakage, low pressure, broken pipelines."
+      },
+      "confidence": 0.62,
+      "requiresValidation": false,
+      "matchedKeywords": [
+        "पानी"
+      ],
+      "alternatives": []
+    },
+    "languageCode": "unknown",
+    "status": "Resolved",
+    "location": {
+      "latitude": 26.628154,
+      "longitude": 80.924928,
+      "accuracy": 279,
+      "address": "",
+      "source": "browser"
+    },
+    "transcription": {
+      "provider": "Sarvam AI",
+      "requestId": "20260416_ecd25276-dd96-4ef2-acfe-55148f088db3",
+      "mode": "codemix",
+      "model": null,
+      "languageCode": "hi-IN",
+      "languageProbability": 1
+    },
+    "createdAt": "2026-04-16T21:28:51.417Z",
+    "updatedAt": "2026-04-17T08:43:20.401Z",
+    "statusHistory": [
+      {
+        "status": "Under Review",
+        "changedAt": "2026-04-16T21:29:54.761Z",
+        "note": "Latest complaint status."
+      },
+      {
+        "status": "Resolved",
+        "changedAt": "2026-04-17T08:43:20.401Z",
+        "note": "Updated by admin."
+      }
+    ]
+  }
+]

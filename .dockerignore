@@ -1,0 +1,5 @@
+.git
+.gitignore
+backend/node_modules
+backend/server.out.log
+backend/data/verification-complaints.json

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Access - Voice Grievance System</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell admin-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">Admin Console</p>
+          <h1>Protected Complaint Monitoring Dashboard</h1>
+        </div>
+        <nav class="topnav">
+          <a href="/">Citizen Portal</a>
+          <a href="/track">Track Complaint</a>
+          <a href="/admin">Admin Access</a>
+        </nav>
+      </header>
+
+      <main class="admin-main">
+        <section class="card admin-login-card" id="adminLoginSection">
+          <div class="section-heading">
+            <p class="eyebrow">Admin Login</p>
+            <h3>Sign in to continue</h3>
+          </div>
+          <p class="lead">
+            Admin summary, complaint queue, and status updates are protected. Enter the
+            configured admin password to unlock the dashboard.
+          </p>
+          <form id="adminLoginForm" class="stack admin-form">
+            <label>
+              <span>Admin password</span>
+              <input
+                id="adminPassword"
+                type="password"
+                placeholder="Enter admin password"
+                autocomplete="current-password"
+              />
+            </label>
+            <button class="action-button primary admin-submit" type="submit">
+              Access admin dashboard
+            </button>
+          </form>
+          <div id="loginMessage" class="status-strip">
+            Enter admin password to access complaint management tools.
+          </div>
+        </section>
+
+        <section id="dashboardSection" class="admin-dashboard hidden">
+          <section class="card admin-toolbar">
+            <div class="section-heading">
+              <p class="eyebrow">Dashboard</p>
+              <h3>Complaint monitoring dashboard</h3>
+            </div>
+            <div class="action-row">
+              <button id="logoutBtn" class="action-button ghost" type="button">Logout</button>
+            </div>
+          </section>
+
+          <section class="stats-grid" id="statsGrid"></section>
+
+          <section class="admin-grid">
+            <section class="card">
+              <div class="section-heading">
+                <p class="eyebrow">Status Overview</p>
+                <h3>Complaint pipeline counts</h3>
+              </div>
+              <div id="statusBreakdown" class="breakdown-list"></div>
+            </section>
+
+            <section class="card">
+              <div class="section-heading">
+                <p class="eyebrow">Category Heatmap</p>
+                <h3>Top issue categories</h3>
+              </div>
+              <div id="categoryBreakdown" class="breakdown-list"></div>
+            </section>
+          </section>
+
+          <section class="card table-card">
+            <div class="section-heading">
+              <p class="eyebrow">Complaint Queue</p>
+              <h3>Recent complaints</h3>
+            </div>
+            <div id="tableMessage" class="status-strip">Checking admin session...</div>
+            <div class="table-wrap">
+              <table id="complaintsTable">
+                <thead>
+                  <tr>
+                    <th>Tracking ID</th>
+                    <th>Citizen</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Transcript</th>
+                    <th>Status</th>
+                    <th>Created</th>
+                  </tr>
+                </thead>
+                <tbody id="complaintsBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/admin.js"></script>
+  </body>
+</html>

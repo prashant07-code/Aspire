@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: voice-first-grievance-redressal
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 3000
+      - key: STORAGE_ENGINE
+        value: auto
