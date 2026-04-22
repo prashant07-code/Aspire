@@ -66,7 +66,7 @@ pdf_assets/
 ```env
 HOST=0.0.0.0
 PORT=3000
-SARVAM_API_KEY=your_sarvam_api_key_here
+SARVAM_API_KEY=sk_2mndazrv_bBKUXdbHdeCwbKwQB60jXxTm
 SARVAM_API_URL=https://api.sarvam.ai
 SARVAM_MODEL=saaras:v3
 SARVAM_LANGUAGE_CODE=unknown

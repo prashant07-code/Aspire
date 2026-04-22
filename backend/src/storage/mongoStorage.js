@@ -11,13 +11,17 @@ function normalizeDocument(document) {
 }
 
 export class MongoComplaintStorage {
-  constructor(mongodbUri) {
-    this.mongodbUri = mongodbUri;
+  constructor() {
+    this.mongodbUri = process.env.MONGODB_URI;
     this.mongoose = null;
     this.ComplaintModel = null;
   }
 
   async init() {
+    if (!this.mongodbUri) {
+      throw new Error("MONGODB_URI is not defined in environment variables.");
+    }
+
     if (!this.mongoose) {
       const mongooseModule = await import("mongoose");
       this.mongoose = mongooseModule.default;
@@ -78,7 +82,9 @@ export class MongoComplaintStorage {
 
   async create(record) {
     await this.init();
-    const complaint = await this.ComplaintModel.create(ensureStatusHistory(record));
+    const complaint = await this.ComplaintModel.create(
+      ensureStatusHistory(record)
+    );
     return normalizeDocument(complaint);
   }
 
@@ -100,7 +106,9 @@ export class MongoComplaintStorage {
 
   async updateStatus(trackingId, status) {
     await this.init();
-    const existingComplaint = await this.ComplaintModel.findOne({ trackingId }).lean();
+    const existingComplaint = await this.ComplaintModel.findOne({
+      trackingId
+    }).lean();
 
     if (!existingComplaint) {
       return null;
@@ -115,6 +123,7 @@ export class MongoComplaintStorage {
       ...ensureStatusHistory(existingComplaint).statusHistory,
       createStatusHistoryEntry(status, updatedAt, "Updated by admin.")
     ];
+
     const complaint = await this.ComplaintModel.findOneAndUpdate(
       { trackingId },
       {
